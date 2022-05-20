@@ -1,9 +1,6 @@
 :: Construct %PREFIX%\Scripts\emsdk
 if not exist %PREFIX%\Scripts mkdir %PREFIX%\Scripts\
-echo "# -*- coding: utf-8 -*-" >> %PREFIX%\Scripts\emsdk.py
-echo "import sys" >> %PREFIX%\Scripts\emsdk.py
-echo "from emsdk.emsdk import main" >> %PREFIX%\Scripts\emsdk.py
-echo "main(sys.argv[1:])" >> %PREFIX%\Scripts\emsdk.py
+xcopy %RECIPE_DIR%\emsdk.py %PREFIX%\Scripts\emsdk.py
 if errorlevel 1 exit 1
 
 :: Construct the emsdk Python module
