@@ -20,6 +20,8 @@ requirements:
 
 test:
   commands:
+    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/__init__.py   # [unix]
+    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/emsdk.py   # [unix]
     - emsdk help
     - emsdk install 3.1.2
     - emsdk activate 3.1.2
