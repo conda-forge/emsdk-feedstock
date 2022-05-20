@@ -8,5 +8,5 @@ echo "main(sys.argv[1:])" >> %PREFIX%\bin\emsdk
 
 :: Construct the emsdk Python module
 mkdir %PREFIX%\lib\site-packages\emsdk
-move * %PREFIX%\lib\site-packages\emsdk
+xcopy * %PREFIX%\lib\site-packages\emsdk /E
 type nul > %PREFIX%\lib\site-packages\emsdk\__init__.py
