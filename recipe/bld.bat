@@ -1,5 +1,5 @@
 :: Construct %PREFIX%\bin\emsdk
-mkdir %PREFIX%\bin\emsdk
+mkdir %PREFIX%\bin
 echo "#!%PREFIX%/bin/python" >> %PREFIX%\bin\emsdk
 echo "# -*- coding: utf-8 -*-" >> %PREFIX%\bin\emsdk
 echo "import sys" >> %PREFIX%\bin\emsdk
