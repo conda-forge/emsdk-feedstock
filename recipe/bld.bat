@@ -1,6 +1,5 @@
-:: Construct %PREFIX%\Scripts\emsdk
-if not exist %PREFIX%\Scripts mkdir %PREFIX%\Scripts\
-echo f | xcopy /f /y %RECIPE_DIR%\emsdk.py %PREFIX%\Scripts\emsdk.py
+:: Construct %SCRIPTS%\emsdk
+copy /Y %RECIPE_DIR%\emsdk.py %SCRIPTS%\emsdk.py
 if errorlevel 1 exit 1
 
 :: Construct the emsdk Python module
