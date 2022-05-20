@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec $CONDA_PREFIX/bin/python $CONDA_PREFIX/opt/emsdk/emsdk.py "$@"
