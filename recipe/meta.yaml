@@ -14,6 +14,8 @@ build:
   number: 2
 
 requirements:
+  host:
+    - python
   run:
     - python
     - nodejs
