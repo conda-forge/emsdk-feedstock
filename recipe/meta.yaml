@@ -21,12 +21,15 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/__init__.py   # [unix]
-    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/emsdk.py   # [unix]
+    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/__init__.py                                        # [unix]
+    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/emsdk.py                                           # [unix]
+    - if not exist %PREFIX%\\lib\\site-packages\\emsdk\\__init__.py (exit 1)                                     # [win]
+    - if not exist %PREFIX%\\lib\\site-packages\\emsdk\\emsdk.py (exit 1)                                        # [win]
     - emsdk help
     - emsdk install 3.1.2
     - emsdk activate 3.1.2
-    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/upstream/emscripten/tools/file_packager.py   # [unix]
+    - if not exist %PREFIX%\\lib\\site-packages\\emsdk\\upstream\\emscripten\\tools\\file_packager.py (exit 1)   # [win]
+    - test -f ${PREFIX}/lib/python$PY_VER/site-packages/emsdk/upstream/emscripten/tools/file_packager.py         # [unix]
     - python -c "import emsdk.upstream.emscripten.tools.file_packager"
 
 about:
