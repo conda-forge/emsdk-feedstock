@@ -1,9 +1,5 @@
 :: Construct %SCRIPTS%\emsdk
-echo "#!%PREFIX%/bin/python" >> %SCRIPTS%\emsdk
-echo "# -*- coding: utf-8 -*-" >> %SCRIPTS%\emsdk
-echo "import sys" >> %SCRIPTS%\emsdk
-echo "from emsdk.emsdk import main" >> %SCRIPTS%\emsdk
-echo "main(sys.argv[1:])" >> %SCRIPTS%\emsdk
+copy /Y %RECIPE_DIR%\emsdk %SCRIPTS%\emsdk
 if errorlevel 1 exit 1
 
 :: Construct the emsdk Python module
